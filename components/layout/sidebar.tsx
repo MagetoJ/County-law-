@@ -24,6 +24,7 @@ import {
   ChevronDown,
 } from 'lucide-react';
 import { useAuth } from '@/lib/auth-context';
+import { ThemeToggle } from '@/components/ui/theme-toggle';
 
 const NAV_ITEMS = [
   { label: 'Dashboard', href: '/dashboard', icon: LayoutDashboard, roles: ['governor', 'commander', 'officer', 'admin'] },
@@ -152,6 +153,9 @@ export function Sidebar() {
           <p className="text-sm font-semibold text-sidebar-foreground truncate">{user.firstName} {user.lastName}</p>
           <p className="text-xs text-sidebar-foreground/50 capitalize">{user.role.replace('-', ' ')}</p>
         </div>
+
+        <ThemeToggle />
+
         <Button
           variant="ghost"
           className="w-full justify-start gap-3 text-sidebar-foreground hover:bg-red-500/10 hover:text-red-500"
