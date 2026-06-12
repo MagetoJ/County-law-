@@ -128,7 +128,7 @@ export default function RegisterSchoolPage() {
               </div>
               <div className="p-4 bg-slate-100 border border-dashed rounded text-center text-xs text-slate-500">
                 [ Map Component Integration Area — Simulating Map GPS Pin Capture ]
-              </p>
+              </div>
             </div>
           )}
 

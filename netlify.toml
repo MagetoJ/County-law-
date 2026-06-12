@@ -1,0 +1,16 @@
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+# Optional: Catch-all redirect if you ever encounter clean URL/hydration fallback anomalies
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+  force = false

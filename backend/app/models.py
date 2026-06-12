@@ -1,7 +1,7 @@
 import enum
 from sqlalchemy import Column, Integer, String, Enum, Float, JSON, Text, DateTime
 from sqlalchemy import Boolean
-from backend.app.database import Base
+from app.database import Base
 
 class VerificationStatus(str, enum.Enum):
     PENDING = "pending"

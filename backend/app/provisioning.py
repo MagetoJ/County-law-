@@ -1,8 +1,8 @@
 import secrets
 import string
 from sqlalchemy.orm import Session
-from backend.app.models import User, UserRole
-from backend.app.core.security import hash_password
+from app.models import User, UserRole
+from app.security import hash_password
 
 def auto_provision_account(db: Session, target_email: str, target_role: UserRole, target_profile_id: int):
     """

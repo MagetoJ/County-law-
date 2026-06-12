@@ -1,7 +1,7 @@
 from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy.orm import Session
-from backend.app.database import get_db
-from backend.app.models import SchoolRegistration, VerificationStatus
+from app.database import get_db
+from app.models import SchoolRegistration, VerificationStatus
 import random
 import string
 from pydantic import BaseModel, EmailStr

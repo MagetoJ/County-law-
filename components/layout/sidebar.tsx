@@ -19,6 +19,7 @@ import {
   LogOut,
   Menu,
   X,
+  HeartPulse, // Changed from HeartIcon to HeartPulse as it's more relevant for health surveillance
   Shield,
   BookOpen,
   ChevronDown,
@@ -37,6 +38,7 @@ const NAV_ITEMS = [
   { label: 'Community', href: '/community', icon: Users2, roles: ['commander', 'admin'] },
   { label: 'Analytics', href: '/analytics', icon: BarChart3, roles: ['governor', 'commander', 'admin'] },
   { label: 'Admin', href: '/admin/users', icon: Settings, roles: ['admin'] },
+  { label: 'Health Surveillance', href: '/admin/health', icon: HeartPulse, roles: ['governor', 'county_admin', 'law_admin'] },
 ];
 
 const SCHOOL_NAV_ITEMS = [
