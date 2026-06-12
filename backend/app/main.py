@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from app.routers import auth
+from app.routers import auth, schools
 from app.routers import auth, schools
 
 app = FastAPI(title="KauniSalama API", version="1.0.0")
@@ -19,7 +19,7 @@ app.add_middleware(
 )
 
 # Include Routers matching constants.ts mapping
-app.include_router(auth.router, prefix="/api/auth", tags=["Authentication"])
+app.include_router(auth.router, prefix="/api", tags=["Authentication"]) # Changed prefix to /api to match frontend calls like /api/auth/request-otp
 app.include_router(schools.router, prefix="/api/schools", tags=["Schools Entry Management"])
 @app.get("/api/health")
 async def health_check():
